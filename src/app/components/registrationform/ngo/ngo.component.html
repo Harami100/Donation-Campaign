@@ -1,0 +1,82 @@
+<!-- <div class="body">
+    <h2 class="text-center">Sign Up</h2>
+
+    <form action="">
+
+        <input ngModel name="name" type="text" class="form-control" placeholder="Name" required > <br>
+
+        <input ngModel name="email" type="text" class="form-control" placeholder="Email" required> <br>
+
+        <input ngModel name="password" type="password" class="form-control" placeholder="Password" required minlength="6"> <br>
+
+        <input  ngModel name="confirmpassword" type="password" class="form-control" placeholder="Confirm Password" required> <br>
+
+        <input ngModel name="address" type="address" class="form-control" placeholder="Address" required> <br>
+
+        <button type="submit" class="btn btn-primary"> Create an account</button> <br>
+        
+
+    </form>
+</div> -->
+<!--<app-navbar></app-navbar>-->
+<br>
+<h2 class="text-center">NGO Registration</h2>
+<div class="">
+    <div class="card-body">
+      <form  #ngoForm="ngForm">
+        <div class="form-group">
+          <label for="ngo_name">ngo name</label>
+          <input type="text" [(ngModel)]="ngo.ngo_name" class="form-control" id="ngo_name" name="ngo_name" placeholder="Enter your name" required #ngo_name="ngModel">
+          <div class="alert alert-danger"  *ngIf="ngo_name.invalid && ngo_name.touched">Name is required</div>
+        </div>
+       
+
+        <div class="form-group">
+            <label for="ngo_name">ngo address</label>
+            <input type="text" [(ngModel)]="ngo.ngo_address" class="form-control" id="ngo_address" name="ngo_address" placeholder="Enter your address" required #ngo_address="ngModel">
+            <div class="alert alert-danger"  *ngIf="ngo_address.invalid && ngo_address.touched">Address is required</div>
+          </div>
+        
+        <div class="form-group">
+            <label for="ngo_phoneNo">Mobile number</label>
+            <input type="tel" [(ngModel)]="ngo.ngo_phoneNo" class="form-control" id="ngo_phoneNo" name="ngo_phoneNo"
+            placeholder="Enter your phone number"  #ngo_phoneNo="ngModel" required="required" maxlength="10" minlength="10" pattern="[789][0-9]{9}">
+            <div class="alert alert-danger"  *ngIf="ngo_phoneNo.errors?.required && ngo_phoneNo.touched">Phone number is required</div>
+            
+            
+            <div class="alert alert-danger"  *ngIf="ngo_phoneNo.errors?.pattern && ngo_phoneNo.touched">Please enter a valid number </div>
+            
+          </div>
+        
+        
+        <div class="form-group">
+          <label for="ngo_email">Email</label>
+          <input type="text" [(ngModel)]="ngo.ngo_email" class="form-control" id="ngo_email" name="ngo_email" placeholder="Enter your email address" required email #ngo_email="ngModel">
+          <div class="alert alert-danger"  *ngIf="ngo_email.errors?.required && ngo_email.touched">Email is required</div>
+          <div class="alert alert-danger"  *ngIf="ngo_email.errors?.email && ngo_email.touched">Email format is not correct</div>
+        </div>
+
+        <div class="form-group">
+            <label for="ngo_password">Password</label>
+            <input type="password" [(ngModel)]="ngo.ngo_password" class="form-control" id="ngo_password" name="ngo_password" placeholder="Enter your password" required #ngo_password="ngModel" minlength="6">
+            <div class="alert alert-danger"  *ngIf="ngo_password.errors?.required && ngo_password.touched">Password is required</div>
+        <div class="alert alert-danger"  *ngIf="ngo_password.errors?.minlength && ngo_password.touched">Password should be more than 6 characters</div>
+      <br>
+        </div>
+        
+        <!----
+        <div>
+      <label for="ngo_confirmpassword">Confirm Password</label>
+            <input type="password" [(ngModel)]="ngo_confirmpassword" class="form-control" id="ngo_confirmpassword" name="ngo_confirmpassword" placeholder="Confirm password"  #ngo_confirmpassword="ngModel" required>   
+           ---- <div class="alert alert-danger"  *ngIf="ngo_confirmpassword.errors?.required && ngo_confirmpassword.touched">Confirmpassword is required</div>
+      </div>
+      -->
+
+        <button type="submit"  [disabled]="!ngoForm.form.valid"  class="btn btn-info">Sign up</button>
+        &nbsp; &nbsp; &nbsp;
+        <button type ="reset" class="btn btn-primary" >Reset </button> 
+        &nbsp; &nbsp;
+      <a routerLink='/login'>Already Registered ?</a>
+      </form>
+    </div>
+  </div>

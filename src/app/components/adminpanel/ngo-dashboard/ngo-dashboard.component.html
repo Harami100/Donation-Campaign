@@ -1,0 +1,33 @@
+<div class='jumbotron'>
+    <h2 style="text-align: center; color:indigo">NGO data</h2>
+    <br><br><br>
+    <table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr> 
+            <th style="text-align: center;background-color: gray;color:white" colspan="7"> NGO Details </th>
+        </tr>
+        <tr style="background-color: indianred;color:indigo">
+            <th> NGO Name </th>
+            <th> NGO Password </th>
+            <th> NGO Address </th>
+            <th> NGO Mobile </th>
+            <th> NGO Email </th>
+            
+            <th> Delete NGO </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let n of ngo">
+            <td>{{n.ngo_name}}</td>
+            <td>{{n.ngo_password}}</td>
+            <td>{{n.ngo_address}}</td>
+            <td>{{n.ngo_phoneNo}}</td>
+            <td>{{n.ngo_email}}</td>
+           
+            <td><a class="btn btn-danger" (click)="delete(n.ngo_id)">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<button class="btn btn-primary" [routerLink]="['/home']">Back</button>
+</div>

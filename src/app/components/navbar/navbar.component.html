@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Donation Campaign</a>
+    <button class="navbar-toggler" (click)=toggelNavBar() type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse card-header p-0 pt-1" class="" [class.show]="isOpen" id="navbarNav">
+      
+      
+      <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" routerLink="/" routerLinkActive="Active" >Home</a>
+        </li>
+        
+       
+        
+
+      
+        <div class="btn-group">
+          <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Create Campaign
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">NGO </a>
+            <a class="dropdown-item" href="#">Individual</a>
+            
+          </div>
+        </div>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login"  routerLinkActive="Active" >Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="admin"  routerLinkActive="Active" > YOGI ADMIN</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="adminpage"  routerLinkActive="Active" > ADMIN Prajakta</a>
+        </li>
+
+        
+
+        <li class="nav-item">
+          <a class="btn btn-success" routerLink="/logout" routerLinkActive="Active"  >Logout</a>
+        </li>
+
+
+        <!-- Example single danger button -->
+<div class="btn-group">
+<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Registration Form
+</button>
+<div class="dropdown-menu">
+  <a class="dropdown-item" routerLink='signup'>Donor Registration</a>
+  <a class="dropdown-item" routerLink='ngo'>NGO Registration</a>
+  <a class="dropdown-item" routerLink='user'>Individual Registration</a>
+</div>
+</div>
+
+
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</nav>
+
+
+
+

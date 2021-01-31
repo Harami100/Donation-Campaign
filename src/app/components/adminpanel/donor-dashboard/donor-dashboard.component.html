@@ -1,0 +1,34 @@
+
+
+<div class='jumbotron'>
+    <h2 style="text-align: center; color:indigo">Donor Data</h2>
+    <br><br><br>
+    <table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr> 
+            <th style="text-align: center;background-color: gray;color:white" colspan="6"> Donor Details </th>
+        </tr>
+        <tr style="background-color: indianred;color:indigo">
+            <th> Donor Name </th>
+            <th> Donor Password </th>
+            <th> Donor Address </th>
+            <th> Donor Mobile </th>
+            <th> Donor Email </th>
+            <th> Delete Donor </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let d of donor">
+            <td>{{d.donor_name}}</td>
+            <td>{{d.donor_password}}</td>
+            <td>{{d.donor_address}}</td>
+            <td>{{d.donor_phoneNo}}</td>
+            <td>{{d.donor_email}}</td>
+            <td><a class="btn btn-danger" (click)="delete(d.donor_id)">Delete</a></td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<button class="btn btn-primary" [routerLink]="['/admin']">Back</button>
+</div>
+

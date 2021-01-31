@@ -1,0 +1,61 @@
+<h2 class="text-center">Donor Registration</h2>
+<div class="">
+    <div class="card-body">
+      <form (ngSubmit)="register()" #donorForm="ngForm">
+        <div class="form-group">
+          <label for="donor_name">Donor name</label>
+          <input type="text" [(ngModel)]="donor.donor_name" class="form-control" id="donor_name" name="donor_name" placeholder="Enter your name" required #donor_name="ngModel">
+          <div class="alert alert-danger"  *ngIf="donor_name.invalid && donor_name.touched">Name is required</div>
+        </div>
+       
+
+        <div class="form-group">
+            <label for="donor_address">Donor address</label>
+            <input type="text" [(ngModel)]="donor.donor_address" class="form-control" id="donor_address" name="donor_address" placeholder="Enter your address" required #donor_address="ngModel">
+            <div class="alert alert-danger"  *ngIf="donor_address.invalid && donor_address.touched">Address is required</div>
+          </div>
+        
+        <div class="form-group">
+            <label for="donor_phoneNo">Mobile number</label>
+            <input type="tel" [(ngModel)]="donor.donor_phoneNo" class="form-control" id="donor_phoneNo" name="donor_phoneNo"
+            placeholder="Enter your phone number"  #donor_phoneNo="ngModel" required="required" maxlength="10" minlength="10" pattern="[789][0-9]{9}">
+            <div class="alert alert-danger"  *ngIf="donor_phoneNo.errors?.required && donor_phoneNo.touched">Phone number is required</div>
+            
+            
+            <div class="alert alert-danger"  *ngIf="donor_phoneNo.errors?.pattern && donor_phoneNo.touched">Please enter a valid number </div>
+            
+          </div>
+        
+        
+        <div class="form-group">
+          <label for="donor_email">Email</label>
+          <input type="text" [(ngModel)]="donor.donor_email" class="form-control" id="donor_email" name="donor_email" placeholder="Enter your email address" required email #donor_email="ngModel">
+          <div class="alert alert-danger"  *ngIf="donor_email.errors?.required && donor_email.touched">Email is required</div>
+          <div class="alert alert-danger"  *ngIf="donor_email.errors?.email && donor_email.touched">Email format is not correct</div>
+        </div>
+
+        <div class="form-group">
+            <label for="donor_password">Password</label>
+            <input type="password" [(ngModel)]="donor.donor_password" class="form-control" id="donor_password" name="donor_password" placeholder="Enter your password" required #donor_password="ngModel" minlength="6">
+            <div class="alert alert-danger"  *ngIf="donor_password.errors?.required && donor_password.touched">Password is required</div>
+        <div class="alert alert-danger"  *ngIf="donor_password.errors?.minlength && donor_password.touched">Password should be more than 6 characters</div>
+      <br>
+        
+        <!---
+        
+      <label for="donor_confirmpassword">Confirm Password</label>
+            <input type="password" [(ngModel)] = "donor.donor_confirmpassword" class="form-control" #donor_confirmpassword="ngModel" id="donor_confirmpassword" name="donor_confirmpassword" placeholder="Confirm password"   required>   
+         <div class="alert alert-danger"  *ngIf="donor_confirmpassword.errors?.required && donor_confirmpassword.touched">Confirmpassword is required</div>
+         <div class="alert alert-danger"  *ngIf="donor_password.value  !==  donor_confirmpassword.value && donor_confirmpassword.touched">password not identical</div>
+        -->  
+        </div>
+      
+
+        <button type="submit" (click)="register()" [disabled]="!donorForm.form.valid" class="btn btn-info">Sign up</button>
+        &nbsp; &nbsp; &nbsp;
+        <button type ="reset" class="btn btn-primary">Reset </button> 
+        &nbsp; &nbsp;
+      <a routerLink='/login'>Already Registered ?</a>
+      </form>
+    </div>
+  </div>
