@@ -11,7 +11,7 @@ export class NgoService {
   id:number=0;
 
   constructor(private http:HttpClient) {
-    this.ngoUrl='http://localhost:8080/ngos';
+    this.ngoUrl='http://localhost:8080/api/ngos';
    }
 
    public findAll():Observable<Ngo[]>{

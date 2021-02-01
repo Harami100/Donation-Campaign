@@ -13,7 +13,7 @@ export class DonorService {
 
 
   constructor(private http:HttpClient) {
-    this.donorUrl='http://localhost:8080/donors';
+    this.donorUrl='http://localhost:8080/api/donors';
    }
 
    public findAll():Observable<Donor[]>{

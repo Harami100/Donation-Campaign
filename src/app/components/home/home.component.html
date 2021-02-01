@@ -9,61 +9,23 @@
       
   </app-carousel>
 </div> 
-  
+
 <body style="background-color: rgb(226, 222, 228);">
 
+
+<br>
+  
 <div class="blink"><span>Small charities can bring bigger impacts...PLEASE DONATE
 </span></div>
 <br> 
 
-<div class="container" id="imgcontainer" >
 
-<!-- <div class="card"  id="card1"  style="height: 10rem; width:70rem; background-color: rgb(245, 241, 9);" > -->
-  <div class="row"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <div class="col" ><img src="../../../assets/cart1.jpg" style="width: 80px; height: 80px;" id="i1"><br><br><b>Products Raised</b>
-
-</div> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <div class="col" ><img src="../../../assets/ngo.png" style="width: 100px; height: 80px;" id="i1"><br><br><b>NGOs Impacted</b>
-
-
-      </div> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <div class="col" ><img src="../../../assets/ppl.webp" style="width: 80px; height: 80px;" id="i1"><br><br><b>Unique Donors</b>
-
-
-      </div> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <div class="col" ><img src="../../../assets/user.jpg" style="width: 80px; height: 80px;" id="i1"><br><br><b>Worth Donations</b>
-      </div>
-    </div>
-    </div>
 
 <br>
 <div class="container" >
 
 
-<div class="row"> 
-  <div class="col-xs-6" id="c">
-    <div class="card" style="width: 35rem; height: 27rem; background-color: rgb(21, 162, 180);" >
-      <img src="../assets/food2.webp" class="card-img-top" alt="..." height="200" width="30">
-      <div class="card-body">
-        <h5 class="card-title"><b>Donate Food</b> </h5><br>
-        <p class="card-text">Give Someone a Meal, Their Hunger Is Real.<br>Alone we can do so little,together we can do so much</p>
-           <br>  <a routerLink="/food" routerLinkActive="active" class="btn btn-dark">Explore</a>
 
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-xs-6" id="card2">
-    <div class="card" style="width: 35rem; height: 27rem;  background-color: rgb(21, 162, 180);">
-      <img src="../assets/clothes.jpg" class="card-img-top" alt="..." height="200" width="30">
-      <div class="card-body">
-        <h5 class="card-title"> <b>Donate Clothes</b></h5><br>
-        <p class="card-text">This Winter,Save the poors from biting cold.</p><br><br>
-        <a routerLink="/clothes" routerLinkActive="active" class="btn btn-dark">Explore</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 </div>
@@ -73,38 +35,161 @@
 
 
 
-<div class="container" >
 
-
-  <div class="row"> 
-    <div class="col-xs-12" id="c">
-      <div class="card" style="width: 35rem; height: 27rem;   background-color: rgb(21, 162, 180);" routerLink="/food" routerLinkActive="active">
-        <img src="../../../assets/board.jpg" class="card-img-top" alt="..." height="200" width="30">
-        <div class="card-body">
-          <h5 class="card-title"><b>Donate Study Material</b> </h5><br>
-          <p class="card-text">Giving is not just about making a Donation,it is about making a difference..<br>Alone we can do so little,together we can do so much</p>
-             <br>  <a routerLink="/study" routerLinkActive="active" class="btn btn-dark">Explore</a>
-  
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-xs-6" id="card2">
-      <div class="card" style="width: 35rem; height: 27rem;   background-color: rgb(21, 162, 180);" 
-       routerLink="/clothes" routerLinkActive="active">
-        <img src="../../../assets/random.jpg" class="card-img-top" alt="..." height="200" width="30">
-        <div class="card-body">
-          <h5 class="card-title"> <b>Donate Other things</b></h5><br>
-          <p class="card-text">Charity is not only a name to give money, help to others in different styles.
-          </p><br><br>
-          <a routerLink="/random-donation" routerLinkActive="active" class="btn btn-dark">Explore</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  
-  </div> 
   
 </body>
 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.row
+{
+  margin-left: 15%;
+}
+</style>
+</head>
+<body>
+
+
+  <div class="row">
+    <div class="col">
+      <h1>Donate Food</h1>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="/assets/card_1.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      
+      <p>Give Someone a Meal, Their Hunger Is Real.<br>Alone we can do so little,together we can do so much</p> 
+      <a routerLink="/food" routerLinkActive="active" class="btn btn-success btn-lg">Explore</a>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <h1>Donate Cloths</h1>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="/assets/card_2.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      
+      <p class="card-text">This Winter,Save the poors from biting cold.</p><br><br>
+      <a routerLink="/clothes" routerLinkActive="active" class="btn  btn-success btn-lg">Explore</a>
+    </div>
+  </div>
+</div>
+    </div>
+   
+  </div> 
+
+  <br>
+  <br>
+
+
+  <div class="row">
+    <div class="col">
+      <h1>Donate Study Material</h1>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="/assets/card_3.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      
+      <p class="card-text">Giving is not just about making a Donation,it is about making a difference..<br>Alone we can do so little,together we can do so much</p>
+      <br>  <a routerLink="/study" routerLinkActive="active" class="btn  btn-success btn-lg">Explore</a>
+
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col">
+      <h1>Donate Other Things</h1>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="/assets/card_4.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+   
+      <p class="card-text">Charity is not only a name to give money, help to others in different styles.
+      </p><br><br>
+      <a routerLink="/random-donation" routerLinkActive="active" class="btn  btn-success btn-lg">Explore</a>
+
+    </div>
+  </div>
+</div>
+    </div>
+
+  </div>
+
+
+  <div class="class">
+    <app-footer>
+  
+    </app-footer>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

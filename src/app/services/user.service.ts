@@ -12,7 +12,7 @@ export class UserService {
   id:number=0;
 
   constructor(private http:HttpClient) {
-    this.userUrl='http://localhost:8080/users';
+    this.userUrl='http://localhost:8080/api/users';
    }
 
    public findAll():Observable<User[]>{

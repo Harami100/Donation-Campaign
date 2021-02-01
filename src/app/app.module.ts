@@ -35,6 +35,7 @@ import { NgoDashboardComponent } from './components/adminpanel/ngo-dashboard/ngo
 import { UserDashboardComponent } from './components/adminpanel/user-dashboard/user-dashboard.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { WidgetsComponent } from './components/admin/widgets/widgets.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -63,6 +64,7 @@ import { WidgetsComponent } from './components/admin/widgets/widgets.component';
     AdminPageComponent,
     AdminComponent,
     WidgetsComponent,
+    FooterComponent,
     
     
   ],

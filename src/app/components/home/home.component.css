@@ -33,7 +33,7 @@ span{
  #i1
  {
     
-        border-radius: 50%;
+        border-radius: 150%;
      
  }
 
@@ -43,4 +43,34 @@ span{
 
  }
 
- 
+ .ml7 {
+    position: relative;
+    font-weight: 900;
+    font-size: 3.7em;
+  }
+  .ml7 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+
+  }
+  .ml7 .letter {
+    transform-origin: 0 100%;
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  
+  .card-text
+  {
+      
+      text-align: center;
+  }
+  
+  .flip-card-back
+  {
+      margin-top: 10px;
+  }
