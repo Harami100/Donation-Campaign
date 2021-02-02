@@ -36,6 +36,9 @@ import { UserDashboardComponent } from './components/adminpanel/user-dashboard/u
 import { AdminComponent } from './components/admin/admin.component';
 import { WidgetsComponent } from './components/admin/widgets/widgets.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CreateCampaignComponent } from './components/create-campaign/create-campaign.component';
+import { CreateNgoComponent } from './components/create-campaign/create-ngo/create-ngo.component';
+import { CreateUserComponent } from './components/create-campaign/create-user/create-user.component';
 
 
 
@@ -65,6 +68,9 @@ import { FooterComponent } from './components/footer/footer.component';
     AdminComponent,
     WidgetsComponent,
     FooterComponent,
+    CreateCampaignComponent,
+    CreateNgoComponent,
+    CreateUserComponent,
     
     
   ],

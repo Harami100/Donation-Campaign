@@ -14,7 +14,8 @@ import { NgoService } from './../../services/ngo.service';
 export class LoginComponent implements OnInit {
 
   loginForm!: FormGroup;
-
+  //private formSubmitAttempt: boolean;
+  //isLoggedIn : boolean = true;
   emailId!:string;
   password!:string;
   donor:any=[];
@@ -73,6 +74,8 @@ export class LoginComponent implements OnInit {
 // }
   login()
   {
+
+    //this.isLoggedIn = !this.isLoggedIn;
     
       if(this.act=="Admin" && this.loginForm.value.emailId=="admin@gmail.com" && this.loginForm.value.password=="Admin123")
       {
@@ -86,13 +89,17 @@ export class LoginComponent implements OnInit {
         if(this.loginForm.value.emailId==this.donor[this.i].donor_email && this.loginForm.value.password==this.donor[this.i].donor_password)
         {
           alert("Donor logged in successfully");
-          this.router.navigateByUrl("home");
+          
+          if (this.loginForm.valid) {
+            this.donorService.login(this.loginForm.value);
+          }
+          //this.router.navigateByUrl("home");
           break;
         }
         else if(this.loginForm.value.emailId!=this.donor[this.i].donor_email && this.loginForm.value.password!=this.donor[this.i].donor_password)
         {
           this.router.navigateByUrl("signup");
-          alert("please register yourself...or recheck email and password"); 
+         // alert("please register yourself...or recheck email and password"); 
         }
       }
     }
@@ -103,13 +110,18 @@ export class LoginComponent implements OnInit {
         if(this.loginForm.value.emailId==this.user[this.i].user_email && this.loginForm.value.password==this.user[this.i].user_password)
         {
           alert("User logged in successfully");
-          this.router.navigateByUrl("home");
+          
+          if (this.loginForm.valid) {
+            this.userService.login(this.loginForm.value);
+          }
+          
+          //this.router.navigateByUrl("home");
           break;
         }
         else if(this.loginForm.value.emailId!=this.user[this.i].user_email && this.loginForm.value.password!=this.user[this.i].user_password)
         {
           this.router.navigateByUrl("signup");
-          alert("please register yourself...or recheck email and password");         
+          //alert("please register yourself...or recheck email and password");         
         }
       }
     }
@@ -120,19 +132,26 @@ export class LoginComponent implements OnInit {
         if(this.loginForm.value.emailId==this.ngo[this.i].ngo_email && this.loginForm.value.password==this.ngo[this.i].ngo_password)
         {
           alert("NGO logged in successfully");
-          this.router.navigateByUrl("home");
+          
+          if (this.loginForm.valid) {
+            this.ngoService.login(this.loginForm.value);
+          }
+          
+          //this.router.navigateByUrl("home");
           break;
         }
         else if(this.loginForm.value.emailId!=this.ngo[this.i].ngo_email && this.loginForm.value.password!=this.ngo[this.i].ngo_password)
         {
           this.router.navigateByUrl("signup");
-          alert("please register yourself...or recheck email and password");         
+        //  alert("please register yourself...or recheck email and password");         
         }
       }
     }
   }
 
+
   ngOnInit(): void {
+  // this.isLoggedIn = !this.isLoggedIn;
     this.getDonorData();
     this.getUserData();
     this.getNgoData();

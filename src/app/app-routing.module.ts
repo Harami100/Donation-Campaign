@@ -23,6 +23,7 @@ import { NgoDashboardComponent } from './components/adminpanel/ngo-dashboard/ngo
 import { UserDashboardComponent } from './components/adminpanel/user-dashboard/user-dashboard.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { WidgetsComponent } from './components/admin/widgets/widgets.component';
+import { CreateNgoComponent } from './components/create-campaign/create-ngo/create-ngo.component';
 
 
 const routes: Routes = [
@@ -47,7 +48,7 @@ const routes: Routes = [
  { path: 'showDonor',component:DonorDashboardComponent},  
   {path: 'showNGO',component:NgoDashboardComponent},
   {path: 'showUser',component:UserDashboardComponent},
-
+{path: 'createngo' , component:CreateNgoComponent},
 
   
   

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DonorService } from 'src/app/services/donor.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+ 
 
   isOpen : boolean = false;
 
@@ -16,7 +18,19 @@ export class NavbarComponent implements OnInit {
     this.isOpen = !this.isOpen;
   }
 
-  ngOnInit(): void {
+  isLoggedIn$!: Observable<boolean>;
+
+
+  constructor(private donorService: DonorService) { }
+
+  ngOnInit() {
+   this.isLoggedIn$ = this.donorService.isLoggedIn;
+   
   }
+
+  onLogout(){
+    this.donorService.logout();
+  }
+
 
 }

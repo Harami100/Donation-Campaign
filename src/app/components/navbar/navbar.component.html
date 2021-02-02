@@ -21,7 +21,7 @@
             Create Campaign
           </button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">NGO </a>
+            <a class="dropdown-item" routerLink='/createngo'>NGO </a>
             <a class="dropdown-item" href="#">Individual</a>
             
           </div>
@@ -41,9 +41,12 @@
 
         
 
-        <li class="nav-item">
-          <a class="btn btn-success" routerLink="/logout" routerLinkActive="Active"  >Logout</a>
-        </li>
+        <div *ngIf="isLoggedIn$ | async as isLoggedIn">
+          <li class="nav-item">
+            <a class="btn btn-success" (click)="onLogout()" *ngIf="isLoggedIn$ | async" routerLink="/logout" routerLinkActive="Active"  >Logout</a>
+          </li>
+        </div>
+  
 
 
         <!-- Example single danger button -->
