@@ -10,7 +10,7 @@ import { DonorService } from 'src/app/services/donor.service';
 export class NavbarComponent implements OnInit {
 
  
-
+  hide : boolean = false;
   isOpen : boolean = false;
 
   toggelNavBar()

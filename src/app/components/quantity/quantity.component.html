@@ -29,12 +29,12 @@ function valid()
 <body>  <br><br>
 
 <div class="container" name="containerclass" align="center">
-<h2>Fill the following form</h2>
+<h2>Request donation form </h2>
 <hr class="dashed">
 
   <div class="card" name="cardclass" style="width: 30rem;height: 30rem;">
     <br>
-    <button type="button" class="btn btn-info btn-lg">Select category</button>
+    <button type="button" class="btn btn-info btn-lg">Select category to donate</button>
     <br>
 
   <div  title="">
@@ -57,25 +57,16 @@ function valid()
     <br>
     <br>
 
-    <button type="button"  class="btn btn-info btn-lg" >Select Quantity</button>
+    <button type="button"  class="btn btn-info btn-lg" >Enter Quantity</button>
+    <br>
+    <br>
+    <input type="number">
     <br>    <br>
 
-    <select name="quantity" id="quant" required>
-      <option value="1">10</option>
-      <option value="2">20</option>
-      <option value="3">30</option>
-      <option value="4">MORE</option>
-    </select>
+    
     
     <br>
-
-
-
-
-    <br>
-    <br>
-
-
+    
   </div>
   <button type="submit" class="btn btn-success" (click)="donate()"  >
     Donate</button>

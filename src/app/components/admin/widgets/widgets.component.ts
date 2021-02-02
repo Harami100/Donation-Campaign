@@ -16,6 +16,8 @@ export class WidgetsComponent implements OnInit {
   cntUser!:number;
   cntNgo!:number;
 
+  
+
   constructor( private donorService: DonorService, private userService: UserService, private ngoService: NgoService) { }
 
   getDonorRegCnt(){
@@ -44,8 +46,5 @@ export class WidgetsComponent implements OnInit {
     this.getUserRegCnt();
     this.getNgoRegCnt();
   }
-
-
-
-
+  
 }

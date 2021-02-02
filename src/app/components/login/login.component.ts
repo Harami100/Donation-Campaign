@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   loginForm!: FormGroup;
   //private formSubmitAttempt: boolean;
-  //isLoggedIn : boolean = true;
+  hide : boolean = false;
   emailId!:string;
   password!:string;
   donor:any=[];
@@ -88,12 +88,13 @@ export class LoginComponent implements OnInit {
       {
         if(this.loginForm.value.emailId==this.donor[this.i].donor_email && this.loginForm.value.password==this.donor[this.i].donor_password)
         {
+          this.hide = !this.hide;
           alert("Donor logged in successfully");
           
           if (this.loginForm.valid) {
             this.donorService.login(this.loginForm.value);
           }
-          //this.router.navigateByUrl("home");
+          this.router.navigateByUrl("/quantity");
           break;
         }
         else if(this.loginForm.value.emailId!=this.donor[this.i].donor_email && this.loginForm.value.password!=this.donor[this.i].donor_password)
@@ -131,6 +132,7 @@ export class LoginComponent implements OnInit {
       {
         if(this.loginForm.value.emailId==this.ngo[this.i].ngo_email && this.loginForm.value.password==this.ngo[this.i].ngo_password)
         {
+          
           alert("NGO logged in successfully");
           
           if (this.loginForm.valid) {

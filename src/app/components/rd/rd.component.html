@@ -1,0 +1,57 @@
+<head><link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+
+
+</head>
+    
+    <div class="container">
+            <div class="row centered-form">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                            <h3 class="panel-title">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                    fill the following Random Donation form </h3>
+                             </div>
+                             <div class="panel-body">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                <input type="text" name="fname" id="fname" class="form-control input-sm" placeholder="First Name" ng-required="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="lname" id="lname" class="form-control input-sm" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div><br>
+    
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                                </div>
+                    <br>
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="donate" id="donate" class="form-control input-sm" placeholder="What do you want to donate">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="quantity" id="quantity" class="form-control input-sm" placeholder="quantity">
+                                        </div>
+                                    </div>
+                                </div><br>
+                                
+                                <input type="submit" value="Donate" class="btn btn-info btn-block"  (click)="donate1()">
+                        
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>

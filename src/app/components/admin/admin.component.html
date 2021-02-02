@@ -12,7 +12,7 @@
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
           <!-- Left navbar links -->
-          <button class="btn-outline-success" routerLink="/">Back</button>
+          <button class="btn-outline-success" routerLink="/">Back to HomePage</button>
       
           <!-- SEARCH FORM -->
           
@@ -184,36 +184,35 @@
                 </li>
 
              
-                <li class="nav-item has-treeview">
-                  <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-table"></i>
-                    <p>
-                      Tables
-                      <i class="fas fa-angle-left right"></i>
-                    </p>
+             <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>
+                  Tables
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a routerLink='/showDonor' class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Donor Data Table</p>
                   </a>
-                  <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                      <a routerLink='/showDonor' class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Donor Tables</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a routerLink='/showNGO' class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Ngo Tables</p>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a routerLink='/showUser' class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>User Table</p>
-                      </a>
-                    </li>
-                  </ul>
                 </li>
- 
+                <li class="nav-item">
+                  <a routerLink='/showNGO' class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>NGO Data Table</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="pages/tables/jsgrid.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>jsGrid</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
               </ul>
             </nav>
             <!-- /.sidebar-menu -->

@@ -24,6 +24,7 @@ import { UserDashboardComponent } from './components/adminpanel/user-dashboard/u
 import { AdminComponent } from './components/admin/admin.component';
 import { WidgetsComponent } from './components/admin/widgets/widgets.component';
 import { CreateNgoComponent } from './components/create-campaign/create-ngo/create-ngo.component';
+import { RdComponent } from './components/rd/rd.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,7 @@ const routes: Routes = [
   {path: 'showNGO',component:NgoDashboardComponent},
   {path: 'showUser',component:UserDashboardComponent},
 {path: 'createngo' , component:CreateNgoComponent},
+{path:'rd',component:RdComponent},
 
   
   

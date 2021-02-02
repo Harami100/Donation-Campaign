@@ -39,6 +39,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CreateCampaignComponent } from './components/create-campaign/create-campaign.component';
 import { CreateNgoComponent } from './components/create-campaign/create-ngo/create-ngo.component';
 import { CreateUserComponent } from './components/create-campaign/create-user/create-user.component';
+import { RdComponent } from './components/rd/rd.component';
 
 
 
@@ -71,6 +72,7 @@ import { CreateUserComponent } from './components/create-campaign/create-user/cr
     CreateCampaignComponent,
     CreateNgoComponent,
     CreateUserComponent,
+    RdComponent,
     
     
   ],
